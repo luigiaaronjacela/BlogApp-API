@@ -14,11 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS Config
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:4000', 'https://your-api.onrender.com/blogs'],
+  origin: [
+    'http://localhost:3000',
+    'https://blog-app-react-one.vercel.app'
+  ],
   credentials: true,
-  optionsSuccessStatus: 200,
 };
-
 app.use(cors(corsOptions));
 
 // MongoDB Connection
