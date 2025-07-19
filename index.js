@@ -16,10 +16,12 @@ app.use(express.urlencoded({ extended: true }));
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://blog-app-react-one.vercel.app'
+    'https://blog-app-react-one.vercel.app', // ✅ Allow your Vercel frontend
   ],
   credentials: true,
+  optionsSuccessStatus: 200,
 };
+
 app.use(cors(corsOptions));
 
 // MongoDB Connection
